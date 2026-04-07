@@ -31,7 +31,7 @@ export default function AnnouncementsCarousel({
                 announcement?.announcementImage?.asset?._ref ??
                   '/placeholder.png',
               )
-                .width(300)
+                .width(500)
                 .height(300)
                 .url()}
               fill
