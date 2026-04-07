@@ -38,12 +38,14 @@ export default async function Page({ params }: { params: PlaylistParams }) {
               hour: 'numeric',
               minute: 'numeric',
               hour12: true,
+              timeZone: 'America/New_York',
             })}
             {' - '}
             {new Date(playlist.end).toLocaleTimeString('en-US', {
               hour: 'numeric',
               minute: 'numeric',
               hour12: true,
+              timeZone: 'America/New_York',
             })}
           </p>
           <p className="mt-4 hidden md:block">
@@ -52,7 +54,7 @@ export default async function Page({ params }: { params: PlaylistParams }) {
         </div>
       </div>
       <div className="flex flex-col p-4 md:w-1/2 md:px-20">
-        {spins.items &&
+        {spins.items.reverse() &&
           spins.items.map((spin, index) => (
             <div className="mx-2 flex gap-x-2 pb-4" key={spin.id}>
               <p>{index + 1}.</p>

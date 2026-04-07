@@ -60,11 +60,13 @@ export default function ScheduleList({ shows }: ScheduleListProps) {
               hour: 'numeric',
               minute: 'numeric',
               hour12: true,
+              timeZone: 'America/New_York',
             })}
             end={new Date(show.end).toLocaleTimeString('en-US', {
               hour: 'numeric',
               minute: 'numeric',
               hour12: true,
+              timeZone: 'America/New_York',
             })}
             key={show.id}
           />
